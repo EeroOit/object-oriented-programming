@@ -16,7 +16,7 @@ namespace kirjaohjelma
             //Console.WriteLine("kirjan hinta on {0}", newBook.price);
 
             Book newBook2 = new Book("Peppi Pitkätossu", "Astrid Lindgren", "0002", 18.95);
-            //Console.WriteLine("kirjan hinta on {0}", newBook2.price);
+            ///Console.WriteLine("kirjan hinta on {0}", newBook2.price);
 
             newBook.CompareBooks(newBook2);
             Console.WriteLine(newBook2.CompareBooks(newBook));
