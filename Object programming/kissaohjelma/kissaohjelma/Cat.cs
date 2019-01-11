@@ -14,11 +14,17 @@ namespace kissaohjelma
             this.weight = 1;
             Console.WriteLine($"kissan alustettu paino on {this.weight}");
         }
+        public void IncreaseWeight(int value)
+        {
+            this.weight = this.weight + value;
+            Console.WriteLine($"kissan {this.name} uusi paino on {this.weight}");
+        }
+
         public Cat(string name, int weightValue)
         {
             this.name = name;
             this.weight = weightValue;
-            Console.WriteLine($"luotu kissa {this.name}");
+            Console.WriteLine($"luotu kissa {this.name} jonka paino on {this.weight}");
         }
 
         public Cat (int weightValue)
@@ -28,7 +34,7 @@ namespace kissaohjelma
         }
         public void PrintWeight()
         {
-            Console.WriteLine($"kissan {this.name} paino on {this.weight}");
+            //Console.WriteLine($"kissan {this.name} paino on {this.weight}");
 
         }
     }
