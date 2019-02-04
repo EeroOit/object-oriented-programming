@@ -12,9 +12,9 @@ namespace Worker
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Employee[] employees = new Employee[3];
-            employees[0] = new Employee("a", "siivoja", 1000);
-            employees[1] = new Employee("b", "huoltomies", 1250);
-            employees[2] = new Employee("c", "korjaaja", 1500);
+            employees[0] = new Employee("a", "Cleaner", 1000);
+            employees[1] = new Employee("b", "Repairman", 1250);
+            employees[2] = new Employee("c", "Waiter", 1500);
 
             foreach (Employee employee in employees)
             {
