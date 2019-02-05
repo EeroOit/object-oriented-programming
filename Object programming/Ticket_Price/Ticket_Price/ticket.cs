@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Ticket_Price
 {
-    class ticket
+    class Ticket
     {
-           public double price = 16;
+        public double price = 16;
         public double discount = 1;
 
-        public ticket()
+        public Ticket()
         { }
 
-        public ticket( double price, double discount)
+        public Ticket( double price, double discount)
         {
 
             this.price = price;

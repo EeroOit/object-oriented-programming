@@ -13,7 +13,7 @@ namespace Ticket_Price
             Console.Write("Syötä valintasi: ");
             
 
-            ticket price = new ticket();
+            Ticket price = new Ticket();
             price.AskData();
             price.PriceCalculation();
 
