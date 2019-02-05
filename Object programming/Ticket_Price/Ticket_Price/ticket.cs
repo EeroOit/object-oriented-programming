@@ -48,7 +48,7 @@ namespace Ticket_Price
                     discount = 0.50;
                     break;
                 case "6":
-                case "65 tai yli":
+                case "65 ja yli":
                     discount = 0.5;
                     break;
                 case "7":
