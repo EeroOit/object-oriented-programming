@@ -18,7 +18,7 @@ namespace Ticket_Price
             price.PriceCalculation();
 
             Console.WriteLine("--------------------------------");
-            Console.Write("Paina mitä tahansa jatkaaksesi...");
+            Console.Write("Paina mitä tahansa jatkaaksesi..");
             Console.ReadKey();
         }
     }
