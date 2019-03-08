@@ -1,17 +1,22 @@
 ﻿using System;
 
-namespace firm
+namespace Company
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Firm");
+            Console.WriteLine("Firmat:");
 
-            firm data = new firm();
-            data.AskData();
+            Firm FirstFirm = new Firm("Yritys A", "katu,",1234567, 10000,1000);
+            Firm SecondFirm = new Firm(FirstFirm);
 
-            data.Profitmargin();
+            SecondFirm.title = "Yritys B";
+            SecondFirm.income = 2000;
+
+
+            FirstFirm.Profitmargin();
+            SecondFirm.Profitmargin();
         }
     }
 }

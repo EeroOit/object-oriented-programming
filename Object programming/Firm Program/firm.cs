@@ -2,63 +2,61 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace firm
+namespace Company
 {
-    class firm
+    class Firm
+
     {
         public string title;
         public string address;
         public int phone = 1;
-        public int outcome=1;
+        public int income=1;
         public int expense=1;
         
 
-        public firm()
+        public Firm()
         {
         }
 
-        public firm(string title, string address, int phone, int outcome, int expense)
+        public Firm(string title, string address, int phone, int outcome, int expense)
         {
             this.title = title;
             this.address = address;
             this.phone = phone;
-            this.outcome = outcome;
-            this.outcome = expense;
+            this.income = outcome;
+            this.expense = expense;
         }
-        public void AskData()
+      
+        public Firm(Firm previousFirm)
         {
-            Console.Write("Firman Nimi: ");
-            title = Console.ReadLine();
-            Console.Write("Tulot: ");
-            string outcomevalue = Console.ReadLine();
-            Console.Write("menot: ");
-            string expensevalue = Console.ReadLine();
-
-            int.TryParse(outcomevalue, out outcome);
-            int.TryParse(expensevalue, out expense);
+            title = previousFirm.title;
+            address = previousFirm.address;
+            phone = previousFirm.phone;
+            income = previousFirm.income;
+            expense = previousFirm.expense;
         }
             
         public void Profitmargin()
         {
 
-            double profits = 100 * (outcome - expense) / expense;
-            Console.WriteLine($"voitto% on {profits}");
+            double profits = 100 * (income - expense) / expense;
+            Console.WriteLine($"{title} voitto% on {profits}%.");
 
             if (profits >= 300)
             {
-                Console.WriteLine("Firmalla menee hyvin.");
+                Console.WriteLine($"Firmalla {title} menee hyvin.");
             }
             else if (profits >= 200 && profits <300)
             {
-                Console.WriteLine("Firmalla menee tyydyttävästi.");
+                Console.WriteLine($"Firmalla {title} menee tyydyttävästi.");
             }
             else if (profits >= 100 && profits < 200)
             {
-                Console.WriteLine("Firmalla menee välttävästi.");
+                Console.WriteLine($"Firmalla {title} menee välttävästi.");
             }
             else
             {
-                Console.WriteLine("Firmalla menee heikosti");
+                Console.WriteLine($"Firmalla {title} menee heikosti");
             }
 
         }
